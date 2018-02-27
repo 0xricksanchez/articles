@@ -2,7 +2,7 @@
 Hey there!
 I'm finally ready to present you the third installment of the series *exploit mitigation techniques*.
 
-The last two times we talked about [Data Execution Prevention](https://0x00sec.org/t/exploit-mitigation-techniques-data-execution-prevention-dep/) and [Stack Canaries](https://0x00sec.org/t/exploit-mitigation-techniques-stack-canaries/) 
+The last two times we talked about [Data Execution Prevention](https://github.com/0x00rick/articles/tree/master/Data_Execution_Prevention) and [Stack Canaries](https://github.com/0x00rick/articles/tree/master/Stack_Canaries) 
 Today I want to talk about Address Space Layout Randomization or ASLR in short.
 
 Format wise the article will be structured the following way:
@@ -558,7 +558,7 @@ Also let's enable full ASLR: `echo 2 > /proc/sys/kernel/randomize_va_space`
 This results in a binary with the following exploit mitigations in place:
 
 	$ checksec vuln_x64
-	[*] '/home/lab/Git/RE_binaries/0x00sec/ASLR/binaries/vuln_x64'
+	[*] '/home/lab/Git/RE_binaries/ASLR/binaries/vuln_x64'
 	    Arch:     amd64-64-little
 	    RELRO:    FULL RELRO
 	    Stack:    Canary found
@@ -933,9 +933,9 @@ Since we got that one we were able to calculate the base address of libc by look
 ```
 gdb-peda$ vmmap
 Start              End                Perm	Name
-0x00400000         0x00401000         r-xp	/home/lab/Git/RE_binaries/0x00sec/ASLR/binaries/vuln_x64
-0x00600000         0x00601000         r--p	/home/lab/Git/RE_binaries/0x00sec/ASLR/binaries/vuln_x64
-0x00601000         0x00602000         rw-p	/home/lab/Git/RE_binaries/0x00sec/ASLR/binaries/vuln_x64
+0x00400000         0x00401000         r-xp	/home/lab/Git/RE_binaries/ASLR/binaries/vuln_x64
+0x00600000         0x00601000         r--p	/home/lab/Git/RE_binaries/ASLR/binaries/vuln_x64
+0x00601000         0x00602000         rw-p	/home/lab/Git/RE_binaries/ASLR/binaries/vuln_x64
 0x01d12000         0x01d33000         rw-p	[heap]
 0x00007f6c34c55000 0x00007f6c34e15000 r-xp	/lib/x86_64-linux-gnu/libc-2.23.so
 0x00007f6c34e15000 0x00007f6c35015000 ---p	/lib/x86_64-linux-gnu/libc-2.23.so
@@ -1134,8 +1134,8 @@ Last but not least I hope you enjoyed the reading and as always I would apprecia
 
 ### Previous articles
 
-* [Data Execution Prevention](https://0x00sec.org/t/exploit-mitigation-techniques-data-execution-prevention-dep/) 
-* [Stack Canaries](https://0x00sec.org/t/exploit-mitigation-techniques-stack-canaries/) 
+* [Data Execution Prevention](https://github.com/0x00rick/articles/tree/master/Data_Execution_Prevention) 
+* [Stack Canaries](https://github.com/0x00rick/articles/tree/master/Stack_Canaries) 
 
 
 ### References
