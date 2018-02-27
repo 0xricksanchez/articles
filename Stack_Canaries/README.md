@@ -4,7 +4,7 @@ Hey there!
 After quite some time the second part will be finally published :) !
 Sorry for the delay, real life can be overwhelming ;)..
 
-[Last time](https://0x00sec.org/t/exploit-mitigation-techniques-data-execution-prevention-dep/4634) I have introduced this series by covering Data Execution Prevention (DEP).  
+[Last time](https://github.com/0x00rick/articles/tree/master/Data_Execution_Prevention) I have introduced this series by covering Data Execution Prevention (DEP).  
 Today we're dealing with the next big technique.   
 As the title already suggests it will be about stack canaries.  
 The format will be similar to last time.  
@@ -28,7 +28,7 @@ First we will dealing with a basic introduction to the approach, directly follow
 
 ### Basic Design
 
-To prevent corrupted buffers during program runtime another technique besides [data execution prevention](https://0x00sec.org/t/exploit-mitigation-techniques-data-execution-prevention-dep/4634) called stack canaries was proposed and finally implemented as a counter measure against the emerging threat of buffer corruption exploits.  
+To prevent corrupted buffers during program runtime another technique besides [data execution prevention](https://github.com/0x00rick/articles/tree/master/Data_Execution_Prevention) called stack canaries was proposed and finally implemented as a counter measure against the emerging threat of buffer corruption exploits.  
 It was adapted early!
 Patching a single buffer vulnerability in an application is harmless, but even within one program the causes of a simple patched buffer size might cause harm to other areas.   
 On top of that the amount of programs running with legacy code and system rights over their needs is [considerable large](http://gs.statcounter.com/os-version-market-share/windows/desktop/worldwide).   
@@ -833,7 +833,7 @@ Here is another breakdown:
    
 
 ### Proof
-<img src="//0x00sec.s3.amazonaws.com/original/2X/9/95089998298f9ca1ecd6c443f9721dddfdb0ff80.png" width="690" height="401">
+![poc](https://github.com/0x00rick/articles/blob/master/Stack_Canaries/images/poc.png)
 
 We can see in the output that control flow got redirected and popped us a shell!
 So what do we do with this information now?
