@@ -832,7 +832,8 @@ Here is another breakdown:
 4f. address of `/bin/sh` appended lastly
    
 
-### Proof
+### Proof  
+
 ![poc](https://github.com/0x00rick/articles/blob/master/Stack_Canaries/images/poc.png)
 
 We can see in the output that control flow got redirected and popped us a shell!
