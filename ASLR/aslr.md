@@ -1107,7 +1107,7 @@ Next `system()` is called with the contents of `RDI` as a function argument that
 
 https://asciinema.org/a/BaC2iCKPl4xSDSAjTvEO8QsNQ
 
-![PoC](https://github.com/0x00rick/articles/images/poc.png)
+![PoC](https://github.com/0x00rick/articles/blob/master/ASLR/images/poc.png)
 
 ----
 ## Conclusion
@@ -1127,8 +1127,6 @@ PIE makes building ROP chains quite a bit more complex and was left out for the 
 
 Last but not least I hope you enjoyed the reading and as always I would appreciate your feedback to make future articles better!
 
-
--ricksanchez
 
 ---
 
