@@ -206,7 +206,7 @@ ____
 ### Abusing a stack canary disabled binary
 
 I won't cover this over here again.  
-It already was demonstrated how to do that with a basic stack smashing attack in my last [article](https://0x00sec.org/t/exploit-mitigation-techniques-data-execution-prevention-dep/4634).
+It already was demonstrated how to do that with a basic stack smashing attack in my last [article](https://github.com/0x00rick/articles/tree/master/Data_Execution_Prevention).
 
 
 
@@ -570,6 +570,7 @@ if __name__ == '__main__':
 ```
 
 ###Proof
+
 <img src="//0x00sec.s3.amazonaws.com/original/2X/1/1e7f38bb8cfbe9e46f4420e3f6a3cf7d58629d14.png" width="578" height="500">
 
 Ok this worked but it did not necessarily defeat stack canaries!
@@ -869,7 +870,6 @@ But more importantly I hope the stack canary overview cleared any misconceptions
 Next on the plate will be address space layout randomization! 
 
 
--ricksanchez
 ### Further References
 [Linux gcc stack protector flags](https://outflux.net/blog/archives/2014/01/27/fstack-protector-strong/)
 [Playing with canaries for an in depth look at canary implementations](https://www.elttam.com.au/blog/playing-with-canaries/)
