@@ -835,7 +835,7 @@ Here is another breakdown:
 
 ### Proof  
 
-![poc](https://github.com/0x00rick/articles/blob/master/Stack_Canaries/images/poc.png?raw=true)
+![poc](https://github.com/0x00rick/articles/blob/master/Stack_Canaries/images/poc.png)
 
 We can see in the output that control flow got redirected and popped us a shell!
 So what do we do with this information now?
